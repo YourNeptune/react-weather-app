@@ -11,6 +11,10 @@ function App() {
   const [showData, setShowData] = useState(false)
 
 
+  const goBack = () => {
+    setShowData(false)
+  }
+
   const onChange = (e) => {
       setText(e.target.value)
   }
@@ -31,7 +35,7 @@ function App() {
    //Get Weather data:
     const getWeather = async () => {
       // if(e.key === 'Enter' || e.key === undefined){
-        const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_key}`)
+        const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_key}`)
         const weatherData = await res.json()
         setData(weatherData)
         setText('')
@@ -57,8 +61,7 @@ function App() {
 
         {showData &&           
           <div>
-            <button onClick={() => setShowData(false)}>Back to Search</button>
-            <Data data={data}/>
+            <Data data={data} goBack={goBack}/>
           </div>  
         }
          

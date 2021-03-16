@@ -1,18 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .search-page {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin: 60% 0;
-  padding: 0 1.5em;
-  font-size: 1.5em;
+  font-size: 1.4em;
+  color: #333A48;
+  background-color: #e6edf4;
 }
 
 .search-bar {
@@ -21,24 +24,30 @@
   background-color: rgba(255,255,255,0.5);
   box-shadow: 0px 2px 5px 0px rgba(79, 79, 79, 0.8);
   width: fit-content;
+  margin: 0 1em;
  
 }
 
 .search-bar input, .search-bar button {
   border: none;
-  text-align: center;
+  text-align:start;
   font-size: 0.8em;
+  
+  
 }
 
 .search-bar button {
-  background-color: black;
-  color: white;
+  background-color: #333A48;
   padding: 0.5em 1.8em;
   width: auto;
+  color: #e6edf4;
 }
 
 .search-bar input {
-  width: 12em;
+  width: 10em;
+  padding: 0.8em 0.6em;
+  background-color: #e6edf4;
+  border: none;
 }
 
 .search-form {
@@ -48,4 +57,82 @@
 }
 
 
+.goback {
+  font-weight:lighter;
+  color: #8793a4;
+  cursor: pointer;
+  margin-top: 3em;
+}
 
+.data-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #e6edf4;
+  background-color: #333A48;
+}
+
+.data-title {
+  margin-top: 1em;
+}
+
+.location {
+  font-weight: normal;
+  font-size: 2em;
+  margin-bottom: 0.7em;
+}
+
+.description {
+  font-weight: lighter;
+}
+
+.gap {
+  margin-bottom: 2em;
+}
+
+.minmax-temp {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.minmax-temp p {
+  margin-left: 1em;
+}
+
+.temp {
+  font-size: 4em;
+  margin-bottom: 0.4em;
+}
+
+.temp span {
+  font-size: 0.4em;
+  font-weight: normal;
+}
+
+.text {
+  color: #c3cfdd;
+  font-weight: lighter;
+}
+
+.card {
+  width: 20em;
+  height: 24em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -10em 0 0 -10em;
+  background-color: rgba(93, 99, 110, 0.479);
+  border-radius: 5px;
+  /* box-shadow: 4px 4px 5px 3px rgba(148, 151, 158, 0.356); */
+}
+
+.card .goback {
+  margin-top: 5em;
+}
