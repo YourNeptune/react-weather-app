@@ -69,7 +69,7 @@ const Data = ({data, goBack}) => {
                 break;
 
             default:
-                setIcon('')
+                
         }
     }
 
@@ -85,7 +85,6 @@ const Data = ({data, goBack}) => {
                         <p className='description'>{data.weather[0].main}</p>
                     </div>
                     <div className='data-icon gap'>
-                        {/* <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt='weather_icon'/> */}
                         <FontAwesomeIcon 
                                     icon={icon}
                                     size='2x'   

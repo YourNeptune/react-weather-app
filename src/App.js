@@ -34,14 +34,16 @@ function App() {
 
    //Get Weather data:
     const getWeather = async () => {
-      // if(e.key === 'Enter' || e.key === undefined){
         const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_key}`)
-        const weatherData = await res.json()
-        setData(weatherData)
-        setText('')
-        setShowData(true)
-        console.log(data)
-      // }
+          if(res.status === 200){
+            const weatherData = await res.json()
+            setData(weatherData)
+            setText('')
+            setShowData(true)
+          }else{
+            alert('Error: Can not find any matching data')
+          }
+        // console.log(res.status)
   } 
   
 
