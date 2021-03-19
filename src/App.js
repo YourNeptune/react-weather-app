@@ -41,7 +41,7 @@ function App() {
             setText('')
             setShowData(true)
           }else{
-            alert('Error: Can not find any matching data')
+            alert('Error: Unknown city name, please enter again.')
           }
         // console.log(res.status)
   } 
